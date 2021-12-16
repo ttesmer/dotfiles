@@ -104,8 +104,8 @@ eval `dircolors ~/.dircolors`
 alias reload=". ~/.zshrc"
 alias -s py="python3"
 alias mp3="youtube-dl -x --audio-format mp3"
-alias server="python http-server 2503"
-alias aocwait="python $HOME/.local/bin/wait.py"
+alias server="python3 -m http.server 2503"
+alias aocwait="python3 $HOME/.local/bin/wait.py"
 
 yeet() {
 	tslink+=( "$(curl --upload-file "$1" "https://transfer.sh/$(basename "$1")" )" )
