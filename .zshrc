@@ -109,5 +109,6 @@ alias aocwait="python3 $HOME/.local/bin/wait.py"
 
 yeet() {
 	tslink+=( "$(curl --upload-file "$1" "https://transfer.sh/$(basename "$1")" )" )
-	echo "${tslink[$((${#tslink[@]}-1))]}" | xclip -i	
+	echo "${tslink[$((${#tslink[@]}-1))]}\n"
+	echo "${tslink[$((${#tslink[@]}-1))]}" | pbcopy
 }
